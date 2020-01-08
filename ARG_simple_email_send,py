@@ -1,0 +1,11 @@
+import smtplib
+
+email_user = 'johnnymcbadass@gmail.com'
+email_send = 'johnnymcbadass@gmail.com'
+server = smtplib.SMTP('smtp.gmail.com', 587)
+server.starttls()
+server.login(email_user, 'johnny7test')
+
+message = 'boom'
+server.sendmail(email_user, email_send, message)
+server.quit()
