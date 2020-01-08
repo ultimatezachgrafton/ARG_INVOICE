@@ -1,11 +1,11 @@
 import smtplib
 
 email_user='test@aol.com'
-ema
+email_send = 'test@aol.com'
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
 server.login(email_user, 'user')
 
 message = 'boom'
-server.sendmail(email.user, 'tesrt@aol.com',message)
+server.sendmail(email.user, email_send, 'tesrt@aol.com',message)
 server.quit()
